@@ -1,0 +1,52 @@
+@font-face {
+    font-family: 'Cambria';
+    src: url('Cambria-Bold.eot');
+    src: local('Cambria Bold'), local('Cambria-Bold'),
+        url('Cambria-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Cambria-Bold.woff2') format('woff2'),
+        url('Cambria-Bold.woff') format('woff'),
+        url('Cambria-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cambria';
+    src: url('Cambria-Italic.eot');
+    src: local('Cambria Italic'), local('Cambria-Italic'),
+        url('Cambria-Italic.eot?#iefix') format('embedded-opentype'),
+        url('Cambria-Italic.woff2') format('woff2'),
+        url('Cambria-Italic.woff') format('woff'),
+        url('Cambria-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cambria';
+    src: url('Cambria.eot');
+    src: local('Cambria'),
+        url('Cambria.eot?#iefix') format('embedded-opentype'),
+        url('Cambria.woff2') format('woff2'),
+        url('Cambria.woff') format('woff'),
+        url('Cambria.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cambria';
+    src: url('Cambria-BoldItalic.eot');
+    src: local('Cambria Bold Italic'), local('Cambria-BoldItalic'),
+        url('Cambria-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('Cambria-BoldItalic.woff2') format('woff2'),
+        url('Cambria-BoldItalic.woff') format('woff'),
+        url('Cambria-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
