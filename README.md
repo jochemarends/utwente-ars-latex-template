@@ -1,5 +1,8 @@
 # Academic Research Skills LaTeX Template
 
+> [!WARNING]
+> This template does not yet conform to all requirements and has not been thoroughly checked for bugs.
+
 ## Requirements
 
 - [x] ISO A4 for page size
