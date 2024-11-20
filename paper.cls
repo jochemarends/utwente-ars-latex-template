@@ -4,6 +4,7 @@
 % completely sure if the 9pt is set correctly
 \LoadClass[9pt,a4paper]{article}
 
+\RequirePackage[style=ieee]{biblatex}
 \RequirePackage{calc}
 \RequirePackage{datetime} \RequirePackage{etoolbox}
 \RequirePackage{float}
@@ -11,8 +12,8 @@
 \RequirePackage{fontspec}
 \RequirePackage{graphicx}
 \RequirePackage{multicol}
-\RequirePackage{xparse}
 \RequirePackage{titlesec}
+\RequirePackage{xparse}
 
 \setdefaultdate{\usdate}
 
@@ -85,6 +86,7 @@
 }
 
 \AtEndDocument{
+    \printbibliography[heading=bibintoc]
     \end{multicols*}
 }
 
