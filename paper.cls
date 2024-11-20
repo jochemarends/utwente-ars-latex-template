@@ -2,11 +2,12 @@
 \ProvidesClass{paper}[2024/11/19 Academic Research Skills Paper]
 
 % completely sure if the 9pt is set correctly
-\LoadClass[9pt,a4paper]{article}
+\LoadClass[a4paper]{article}
 
 \RequirePackage[style=ieee]{biblatex}
 \RequirePackage{calc}
-\RequirePackage{datetime} \RequirePackage{etoolbox}
+\RequirePackage{datetime} 
+\RequirePackage{etoolbox}
 \RequirePackage{float}
 \RequirePackage[T1]{fontenc}
 \RequirePackage{fontspec}
@@ -15,6 +16,7 @@
 \RequirePackage{titlesec}
 \RequirePackage{xparse}
 
+% proper formatting of dates
 \setdefaultdate{\usdate}
 
 % gutter width of 5.5 mm
@@ -25,10 +27,32 @@
 % set margins accordingly
 \RequirePackage[width=2\columnwidth+\columnsep,top=0.5in]{geometry}
 
-\titleformat{\section}[block]{\bfseries}{\thesection.\:}{0pt}{}[]
+\NewDocumentCommand{\UseMainFont}{}{
+    \fontsize{9}{11}\selectfont
+    \linespread{1}\selectfont
+}
+
+
+\NewDocumentCommand{\UseBibFont}{}{
+    \fontsize{7pt}{11}\selectfont
+}
+
+\NewDocumentCommand{\UseSectionLineSpacing}{}{
+    \linespread{1.5}\selectfont
+}
+
+\NewDocumentCommand{\UseSubsectionLineSpacing}{}{
+    \linespread{1}\selectfont
+}
+
+\RenewDocumentCommand{\title}{m}{
+    \def\@title{{\fontsize{14}{11}\selectfont #1}}
+}
+
+\titleformat{\section}[block]{\bfseries}{\thesection.\:}{0pt}{\UseSectionLineSpacing}[]
 \titlespacing*{\section}{0pt}{12pt}{3pt}
 
-\titleformat{\subsection}[block]{\itshape}{\thesubsection.\:}{0pt}{}[]
+\titleformat{\subsection}[block]{\itshape}{\thesubsection.\:}{0pt}{\UseSubsectionLineSpacing}[]
 % the requirements mention 9 pt below and 12 pt below, however the Word template uses the other way around
 \titlespacing*{\subsection}{0pt}{12pt}{9pt}
 
@@ -44,10 +68,6 @@
     BoldItalicFont={Cambria-BoldItalic},
 ]
 
-\RenewDocumentCommand{\title}{m}{
-    \def\@title{{\fontsize{14}{11}\selectfont #1}}
-}
-
 \NewDocumentCommand{\track}{+m}{
     \newcommand{\@track}{#1}
 }
@@ -59,7 +79,7 @@
     \@title
     \vskip 2mm
     \noindent
-    \@author
+    {\fontsize{11pt}{11}\selectfont \@author}
     \vskip 2mm
     \noindent
     \ifdefined\@track
@@ -80,9 +100,17 @@
     \noindent\rule{\textwidth}{1pt}
 }
 
+\AtBeginBibliography{
+    \UseBibFont
+}
+
 % after the abstract, start the two-column layout
 \AfterEndEnvironment{abstract}{
     \begin{multicols*}{2}
+}
+
+\AfterPreamble{
+    \UseMainFont
 }
 
 \AtEndDocument{
