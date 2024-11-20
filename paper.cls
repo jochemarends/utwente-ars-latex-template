@@ -28,7 +28,8 @@
 \titlespacing*{\section}{0pt}{12pt}{3pt}
 
 \titleformat{\subsection}[block]{\itshape}{\thesubsection.\:}{0pt}{}[]
-\titlespacing*{\subsection}{0pt}{9pt}{12pt}
+% the requirements mention 9 pt below and 12 pt below, however the Word template uses the other way around
+\titlespacing*{\subsection}{0pt}{12pt}{9pt}
 
 % indent first paragraph of section
 \RequirePackage{indentfirst}

@@ -16,6 +16,6 @@
 - [X] space above and below a first order heading is 12 and 3 points respectively
 - [X] second order heading in italic typeface
 - [ ] second order heading has single line spacing
-- [X] space above and below a second order heading is 9 and 12 points respectively
+- [X] space above and below a second order heading is 12 and 9 points respectively
 - [ ] the reference list must have a font size of 7 pt
 
