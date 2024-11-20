@@ -6,8 +6,8 @@
 \RequirePackage{calc}
 \RequirePackage{datetime} \RequirePackage{etoolbox}
 \RequirePackage{float}
-\usepackage[T1]{fontenc}
-\usepackage{fontspec}
+\RequirePackage[T1]{fontenc}
+\RequirePackage{fontspec}
 \RequirePackage{graphicx}
 \RequirePackage{multicol}
 \RequirePackage{xparse}
