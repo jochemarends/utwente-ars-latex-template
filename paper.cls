@@ -1,6 +1,7 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{paper}[2024/11/19 Academic Research Skills Paper]
 
+% completely sure if the 9pt is set correctly
 \LoadClass[9pt,a4paper]{article}
 
 \RequirePackage{calc}
@@ -23,10 +24,10 @@
 % set margins accordingly
 \RequirePackage[width=2\columnwidth+\columnsep,top=0.5in]{geometry}
 
-\titleformat{\section}[block]{\bfseries}{\thesection.}{1em}{}[]
+\titleformat{\section}[block]{\bfseries}{\thesection.\:}{0pt}{}[]
 \titlespacing*{\section}{0pt}{12pt}{3pt}
 
-\titleformat{\subsection}[block]{\itshape}{\thesubsection.}{1em}{}[]
+\titleformat{\subsection}[block]{\itshape}{\thesubsection.\:}{0pt}{}[]
 \titlespacing*{\subsection}{0pt}{9pt}{12pt}
 
 % indent first paragraph of section
@@ -41,7 +42,9 @@
     BoldItalicFont={Cambria-BoldItalic},
 ]
 
-\renewcommand{\title}[1]{\def\@title{{\fontsize{14}{11}\selectfont #1}}}
+\RenewDocumentCommand{\title}{m}{
+    \def\@title{{\fontsize{14}{11}\selectfont #1}}
+}
 
 \NewDocumentCommand{\track}{+m}{
     \newcommand{\@track}{#1}

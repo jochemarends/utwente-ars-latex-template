@@ -5,7 +5,7 @@ SOURCE_FILE := main.tex
 OUTPUT_FILE := $(patsubst %.tex, $(BUILD_DIR)/%.pdf, $(SOURCE_FILE)) 
 
 LATEX := latexmk
-LATEX_FLAGS := -pdf -xelatex -output-directory=$(BUILD_DIR) -aux-directory=$(BUILD_DIR)
+LATEX_FLAGS := -pdf -bibtex -xelatex -output-directory=$(BUILD_DIR) -aux-directory=$(BUILD_DIR)
 
 .PHONY: build
 build: $(OUTPUT_FILE)

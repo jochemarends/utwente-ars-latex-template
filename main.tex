@@ -1,6 +1,7 @@
 \documentclass{paper}
 
-\usepackage{lipsum}
+\usepackage[style=ieee]{biblatex}
+\addbibresource{./references.bib}
 
 \title{Put your title here}
 \author{Koen Blanke, Jochem Arends, Milan Lopuhaä-Zwakenberg}
@@ -86,5 +87,8 @@ The space above and below the heading is 9 and 12 points respectively.
 The first line is indented 0,25 mm.
 Numbering is in the format: “n.m.” with a space after the number.
 
+\cite{watanabe2019simd}
+
+\printbibliography[heading=bibintoc]
 \end{document}
 
