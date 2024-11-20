@@ -66,7 +66,7 @@
 }
 
 % put horizontal lines above and below the abstract
-\RenewDocumentEnvironment{abstract}{b}{
+\RenewDocumentEnvironment{abstract}{+b}{
     \noindent\rule{\textwidth}{1pt}
     \vspace{0.5em}
     #1
