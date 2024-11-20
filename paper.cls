@@ -4,8 +4,7 @@
 \LoadClass[9pt,a4paper]{article}
 
 \RequirePackage{calc}
-\RequirePackage{datetime}
-\RequirePackage{etoolbox}
+\RequirePackage{datetime} \RequirePackage{etoolbox}
 \RequirePackage{float}
 \usepackage[T1]{fontenc}
 \usepackage{fontspec}
@@ -22,13 +21,18 @@
 \setlength\columnwidth{89.3mm}
 
 % set margins accordingly
-\usepackage[width=2\columnwidth+\columnsep,top=0.5in]{geometry}
+\RequirePackage[width=2\columnwidth+\columnsep,top=0.5in]{geometry}
 
 \titleformat{\section}[block]{\bfseries}{\thesection.}{1em}{}[]
 \titlespacing*{\section}{0pt}{12pt}{3pt}
 
 \titleformat{\subsection}[block]{\itshape}{\thesubsection.}{1em}{}[]
 \titlespacing*{\subsection}{0pt}{9pt}{12pt}
+
+% indent first paragraph of section
+\RequirePackage{indentfirst}
+% the requirements mention 0.25 mm, however, I assume 2.5 mm is meant
+\setlength{\parindent}{0.25cm}
 
 % default typeface
 \setmainfont[Path=./font/]{Cambria}[
@@ -54,22 +58,21 @@
     \vskip 2mm
     \noindent
     \ifdefined\@track
-        Pre-master track: \@track
+        \textit{Pre-master track: \@track}
         \vskip 2mm
         \noindent
     \fi
-    Submission date: \@date
+    \textit{Submission date: \@date}
 }
 
 % put horizontal lines above and below the abstract
 \RenewDocumentEnvironment{abstract}{b}{
-    \noindent\rule{\textwidth}{1pt}\par
+    \noindent\rule{\textwidth}{1pt}
     \vspace{0.5em}
-    \noindent
     #1
 }{
     \vspace{0.5em}
-    \noindent\rule{\textwidth}{1pt}\par
+    \noindent\rule{\textwidth}{1pt}
 }
 
 % after the abstract, start the two-column layout
