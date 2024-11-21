@@ -28,31 +28,31 @@
 \RequirePackage[width=2\columnwidth+\columnsep,top=0.5in]{geometry}
 
 \NewDocumentCommand{\UseMainFont}{}{
-    \fontsize{9}{11}\selectfont
-    \linespread{1}\selectfont
+    \fontsize{9pt}{\baselineskip}\selectfont
 }
 
-
 \NewDocumentCommand{\UseBibFont}{}{
-    \fontsize{7pt}{11}\selectfont
+    \fontsize{7pt}{\baselineskip}\selectfont
 }
 
 \NewDocumentCommand{\UseSectionLineSpacing}{}{
-    \linespread{1.5}\selectfont
+    %\linespread{1.5}\selectfont
+    \fontsize{7pt}{1.5\baselineskip}\selectfont
 }
 
 \NewDocumentCommand{\UseSubsectionLineSpacing}{}{
-    \linespread{1}\selectfont
+    \fontsize{7pt}{\baselineskip}\selectfont
+    %\linespread{1}\selectfont
 }
 
 \RenewDocumentCommand{\title}{m}{
     \def\@title{{\fontsize{14}{11}\selectfont #1}}
 }
 
-\titleformat{\section}[block]{\bfseries}{\thesection.\:}{0pt}{\UseSectionLineSpacing}[]
+\titleformat{\section}[block]{\bfseries}{\thesection.\:}{0pt}{\UseSectionLineSpacing}[\UseMainFont]
 \titlespacing*{\section}{0pt}{12pt}{3pt}
 
-\titleformat{\subsection}[block]{\itshape}{\thesubsection.\:}{0pt}{\UseSubsectionLineSpacing}[]
+\titleformat{\subsection}[block]{\itshape}{\thesubsection.\:}{0pt}{\UseSubsectionLineSpacing}[\UseMainFont]
 % the requirements mention 9 pt below and 12 pt below, however the Word template uses the other way around
 \titlespacing*{\subsection}{0pt}{12pt}{9pt}
 
