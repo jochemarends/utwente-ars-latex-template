@@ -21,7 +21,7 @@
 \setlist[itemize]{leftmargin=0.5cm}
 
 \DeclareCaptionLabelSeparator{semicolon}{.; }
-\captionsetup{format=plain,labelfont=bf,labelsep=semicolon,width=\columnwidth}
+\captionsetup{format=plain,labelfont=bf,labelsep=semicolon,justification=centering}
 
 % proper formatting of dates
 \setdefaultdate{\usdate}
