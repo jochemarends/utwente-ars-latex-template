@@ -108,10 +108,10 @@
 % put horizontal lines above and below the abstract
 \RenewDocumentEnvironment{abstract}{+b}{
     \noindent\rule{\textwidth}{1pt}
-    \vspace{0.5em}
+    \vspace{-1pt}
     #1
 }{
-    \vspace{0.5em}
+    %\vspace{0.5em}
     \noindent\rule{\textwidth}{1pt}
 }
 
