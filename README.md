@@ -18,5 +18,6 @@
 - [X] second order heading in italic typeface
 - [X] second order heading has single line spacing
 - [X] space above and below a second order heading is 12 and 9 points respectively
-- [X] the reference list must have a font size of 7 pt
+- [X] the reference list has a font size of 7 pt
+- [X] a figure's caption starts with "Figure N.;"
 
