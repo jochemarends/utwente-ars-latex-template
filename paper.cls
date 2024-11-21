@@ -27,32 +27,28 @@
 % set margins accordingly
 \RequirePackage[width=2\columnwidth+\columnsep,top=0.5in]{geometry}
 
-\NewDocumentCommand{\UseMainFont}{}{
-    \fontsize{9pt}{\baselineskip}\selectfont
-}
+\newlength{\mainfontsize}
+\setlength{\mainfontsize}{9pt}
 
-\NewDocumentCommand{\UseBibFont}{}{
-    \fontsize{7pt}{\baselineskip}\selectfont
-}
+\newlength{\mainlineskip}
+\setlength{\mainlineskip}{11pt}
 
-\NewDocumentCommand{\UseSectionLineSpacing}{}{
-    %\linespread{1.5}\selectfont
-    \fontsize{7pt}{1.5\baselineskip}\selectfont
-}
+\NewDocumentCommand{\myfont}{}{\fontsize{\mainfontsize}{\mainlineskip}}
 
-\NewDocumentCommand{\UseSubsectionLineSpacing}{}{
-    \fontsize{7pt}{\baselineskip}\selectfont
-    %\linespread{1}\selectfont
-}
+\NewDocumentCommand{\mybibfont}{}{\fontsize{7pt}{\mainlineskip}}
+
+\NewDocumentCommand{\mysectionfont}{}{\fontsize{\mainfontsize}{1.5\mainlineskip}}
+
+\NewDocumentCommand{\mysubsectionfont}{}{\fontsize{\mainfontsize}{\mainlineskip}}
 
 \RenewDocumentCommand{\title}{m}{
     \def\@title{{\fontsize{14}{11}\selectfont #1}}
 }
 
-\titleformat{\section}[block]{\bfseries}{\thesection.\:}{0pt}{\UseSectionLineSpacing}[\UseMainFont]
+\titleformat{\section}[block]{\bfseries}{\thesection.\:}{0pt}{\mysectionfont\selectfont}[\myfont\selectfont]
 \titlespacing*{\section}{0pt}{12pt}{3pt}
 
-\titleformat{\subsection}[block]{\itshape}{\thesubsection.\:}{0pt}{\UseSubsectionLineSpacing}[\UseMainFont]
+\titleformat{\subsection}[block]{\itshape}{\thesubsection.\:}{0pt}{\mysubsectionfont\selectfont}[\myfont\selectfont]
 % the requirements mention 9 pt below and 12 pt below, however the Word template uses the other way around
 \titlespacing*{\subsection}{0pt}{12pt}{9pt}
 
@@ -101,7 +97,7 @@
 }
 
 \AtBeginBibliography{
-    \UseBibFont
+    \mybibfont\selectfont
 }
 
 % after the abstract, start the two-column layout
@@ -110,7 +106,7 @@
 }
 
 \AfterPreamble{
-    \UseMainFont
+    \myfont\selectfont
 }
 
 \AtEndDocument{
