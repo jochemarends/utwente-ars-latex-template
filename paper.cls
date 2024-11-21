@@ -33,6 +33,8 @@
 \newlength{\mainlineskip}
 \setlength{\mainlineskip}{11pt}
 
+\setlength\parskip{0pt}
+
 \NewDocumentCommand{\myfont}{}{\fontsize{\mainfontsize}{\mainlineskip}}
 
 \NewDocumentCommand{\mybibfont}{}{\fontsize{7pt}{\mainlineskip}}
