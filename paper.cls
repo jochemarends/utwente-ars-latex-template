@@ -16,12 +16,11 @@
 \RequirePackage{titlesec}
 \RequirePackage{xparse}
 \RequirePackage{caption}
-\usepackage{enumitem} % For customizing lists
+\RequirePackage{enumitem}
 
-% Globally set left margin for itemize
 \setlist[itemize]{leftmargin=0.5cm}
 
-\DeclareCaptionLabelSeparator{semicolon}{;}
+\DeclareCaptionLabelSeparator{semicolon}{.; }
 \captionsetup{format=plain,labelsep=semicolon,width=\columnwidth}
 
 % proper formatting of dates
