@@ -21,7 +21,6 @@
 \setlist[itemize]{leftmargin=0.5cm}
 
 \DeclareCaptionLabelSeparator{semicolon}{.; }
-\captionsetup{format=plain,labelfont=bf,labelsep=semicolon,justification=centering}
 
 % proper formatting of dates
 \setdefaultdate{\usdate}
@@ -72,6 +71,16 @@
     ItalicFont={Cambria-Italic},
     BoldItalicFont={Cambria-BoldItalic},
 ]
+
+\DeclareCaptionFont{mycaptionfont}{\fontsize{8pt}{\mainlineskip}\selectfont}
+
+\captionsetup{
+    font={mycaptionfont},
+    format=plain,
+    labelfont=bf,
+    labelsep=semicolon,
+    justification=centering
+}
 
 \NewDocumentCommand{\track}{+m}{
     \newcommand{\@track}{#1}

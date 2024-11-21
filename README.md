@@ -20,4 +20,5 @@
 - [X] space above and below a second order heading is 12 and 9 points respectively
 - [X] the reference list has a font size of 7 pt
 - [X] a figure's caption starts with "Figure N.;"
+- [X] font size of a figure's caption is 8 pt 
 
