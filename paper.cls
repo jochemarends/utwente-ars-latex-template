@@ -4,9 +4,12 @@
 % completely sure if the 9pt is set correctly
 \LoadClass[a4paper]{article}
 
+\RequirePackage{amsmath}
 \RequirePackage[style=ieee]{biblatex}
 \RequirePackage{calc}
+\RequirePackage{caption}
 \RequirePackage{datetime} 
+\RequirePackage{enumitem}
 \RequirePackage{etoolbox}
 \RequirePackage{float}
 \RequirePackage[T1]{fontenc}
@@ -15,8 +18,6 @@
 \RequirePackage{multicol}
 \RequirePackage{titlesec}
 \RequirePackage{xparse}
-\RequirePackage{caption}
-\RequirePackage{enumitem}
 
 \setlist[itemize]{leftmargin=0.5cm}
 
