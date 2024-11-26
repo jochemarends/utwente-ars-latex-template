@@ -88,8 +88,9 @@
 }
 
 \RenewDocumentCommand{\maketitle}{}{
-   \begin{center}
-        \makebox[\textwidth]{\includegraphics[width=\paperwidth]{./header.eps}}
+    \begin{center}
+        %\makebox[\textwidth]{\includegraphics[width=\paperwidth]{./header.eps}}
+        \hspace*{-1.0mm}\makebox[\textwidth]{\includegraphics[width=0.99\paperwidth]{./header.eps}}
     \end{center}
     \@title
     \vskip 2mm
