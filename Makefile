@@ -13,7 +13,6 @@ build: $(OUTPUT_FILE)
 $(OUTPUT_FILE): $(TEX_FILES)
 	@mkdir -p $(BUILD_DIR)
 	@$(LATEX) $(LATEX_FLAGS) $(SOURCE_FILE)
-	# for some reason LaTeX generates PDFs in the project's root directory
 	@rm -f *.pdf
 	@cp -f $(OUTPUT_FILE) .
 
@@ -21,3 +20,4 @@ $(OUTPUT_FILE): $(TEX_FILES)
 clean:
 	@rm -f *.pdf
 	@rm -rf $(BUILD_DIR)
+
